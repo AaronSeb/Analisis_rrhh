@@ -1,0 +1,178 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 953,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 862.62310562829725,
+            "y": 398.78122900730648
+          },
+          "nodeIndex": "data_human v_cuarta_vista",
+          "nodeLineageTag": "81ec4669-a2e8-458e-b803-17c78d734066",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 10
+        },
+        {
+          "location": {
+            "x": 1136.6231056282973,
+            "y": 257.47157565940881
+          },
+          "nodeIndex": "data_human v_decima_vista",
+          "nodeLineageTag": "871cf4bc-942b-4f7b-80ce-8208a9b24d33",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 11
+        },
+        {
+          "location": {
+            "x": 1420.6231056282973,
+            "y": 281.47157565940881
+          },
+          "nodeIndex": "data_human v_novena_vista",
+          "nodeLineageTag": "40f97236-5213-4bd3-8aaf-569e3b0ff144",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 371.20419913445676,
+            "y": 0
+          },
+          "nodeIndex": "data_human v_octava_vista",
+          "nodeLineageTag": "53bf900b-cd3d-4365-8843-0c071e0023a5",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 1704.6231056282973,
+            "y": 305.47157565940881
+          },
+          "nodeIndex": "data_human v_quinta_vista",
+          "nodeLineageTag": "d14d6e8b-003e-45d8-a92f-612f1df3e3b6",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 624.85218052781181,
+            "y": 576.94315131881751
+          },
+          "nodeIndex": "data_human v_segunda_vista",
+          "nodeLineageTag": "a7e401ea-e1bf-402b-9baa-9f40eee1febb",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 12
+        },
+        {
+          "location": {
+            "x": 294.13772070907407,
+            "y": 314.78774459790333
+          },
+          "nodeIndex": "data_human v_septima_vista",
+          "nodeLineageTag": "c9edb9a9-78f0-4c27-90c0-b8a252780e4c",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 10,
+            "y": 32.288688880036148
+          },
+          "nodeIndex": "data_human v_sexta_vista",
+          "nodeLineageTag": "e5a49a24-3718-4d65-8a35-a99b8d54e0ae",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 1988.6231056282973,
+            "y": 293.47157565940881
+          },
+          "nodeIndex": "data_human v_tercera_vista",
+          "nodeLineageTag": "11a713fc-0400-496f-8908-309761951253",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 578.39325084474012,
+            "y": 211.41723285773537
+          },
+          "nodeIndex": "data_human v_undecima_vista",
+          "nodeLineageTag": "961babad-3f37-49e9-b7a5-11cd3a66f55f",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 804.97986807293967,
+            "y": 33.233047110325288
+          },
+          "nodeIndex": "data_human w_primera_consulta",
+          "nodeLineageTag": "98b5a7ab-dbf8-4f72-9b5e-6ffc5cfeb673",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 2262.6231056282973,
+            "y": 276.47157565940876
+          },
+          "nodeIndex": "data_human v_group_edad_genero",
+          "nodeLineageTag": "b16c6e57-f2dc-4dc6-b183-5bab50881ef0",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 9
+        }
+      ],
+      "name": "Todas las tablas",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas las tablas",
+  "defaultDiagram": "Todas las tablas"
+}

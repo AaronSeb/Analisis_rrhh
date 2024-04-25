@@ -1,0 +1,1088 @@
+{
+  "compatibilityLevel": 1550,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"data_human v_cuarta_vista\",\"data_human v_decima_vista\",\"data_human v_novena_vista\",\"data_human v_octava_vista\",\"data_human v_quinta_vista\",\"data_human v_segunda_vista\",\"data_human v_septima_vista\",\"data_human v_sexta_vista\",\"data_human v_tercera_vista\",\"data_human v_undecima_vista\",\"data_human w_primera_consulta\",\"data_human v_group_edad_genero\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.123.684.0 (23.11)"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "es-ES",
+    "cultures": [
+      {
+        "name": "es-ES",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "relationships": [
+      {
+        "name": "f64d140a-25b5-4bbf-9bdc-0f5dc41e5cc5",
+        "fromColumn": "department",
+        "fromTable": "data_human v_sexta_vista",
+        "toColumn": "department",
+        "toTable": "data_human v_octava_vista"
+      },
+      {
+        "name": "b3a95d1a-6d24-4096-b95b-d8e663d212ce",
+        "fromColumn": "department",
+        "fromTable": "data_human v_undecima_vista",
+        "toColumn": "department",
+        "toTable": "data_human v_octava_vista"
+      },
+      {
+        "name": "657ae389-b120-4ee4-a5e6-d2637881453b",
+        "fromColumn": "jobtitle",
+        "fromTable": "data_human v_sexta_vista",
+        "toColumn": "jobtitle",
+        "toTable": "data_human v_septima_vista"
+      }
+    ],
+    "sourceQueryCulture": "es-PE",
+    "tables": [
+      {
+        "name": "data_human v_cuarta_vista",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "location",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4135867d-2dd0-4c1e-980a-d5e7028b82b5",
+            "sourceColumn": "location",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "cantidad",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "10e5c115-973c-44d1-a65f-e32bf553ded8",
+            "sourceColumn": "cantidad",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "81ec4669-a2e8-458e-b803-17c78d734066",
+        "partitions": [
+          {
+            "name": "data_human v_cuarta_vista",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Origen = MySQL.Database(\"localhost:3306\", \"data_human\", [ReturnSingleDatabase=true]),",
+                "    data_human_v_cuarta_vista = Origen{[Schema=\"data_human\",Item=\"v_cuarta_vista\"]}[Data]",
+                "in",
+                "    data_human_v_cuarta_vista"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DateTableTemplate_e6acb518-b6ea-4524-ac0d-22c7b6a64c4c",
+        "annotations": [
+          {
+            "name": "__PBI_TemplateDateTable",
+            "value": "true"
+          },
+          {
+            "name": "DefaultItem",
+            "value": "DateHierarchy"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "3f08219a-b333-4ccd-a735-f5da6a6b0eda",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Año",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "5bfa5ed1-4d70-46c5-bf38-8d3497be8280",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "NroMes",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "879e64cf-605e-4cfb-9d48-e12f8f0e510a",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Mes",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "5dd3e254-362d-4320-8f90-8d1ff2838875",
+            "sortByColumn": "NroMes",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "NroTrimestre",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([NroMes] + 2) / 3)",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "2cba8230-b64b-40b7-abc6-f9c932e5eb7e",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Trimestre",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Trim. \" & [NroTrimestre]",
+            "isHidden": true,
+            "lineageTag": "fab5b615-745b-4fa5-93dc-edf5c517eb8e",
+            "sortByColumn": "NroTrimestre",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Día",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "5d8f61ec-a7c6-4c1e-8cf0-5f38da011610",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Jerarquía de fechas",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Año",
+                "column": "Año",
+                "lineageTag": "4608d700-30b2-443c-9925-c1d149e6143c",
+                "ordinal": 0
+              },
+              {
+                "name": "Trimestre",
+                "column": "Trimestre",
+                "lineageTag": "73b20e99-d183-46fc-b29e-6473908a1891",
+                "ordinal": 1
+              },
+              {
+                "name": "Mes",
+                "column": "Mes",
+                "lineageTag": "821f958d-c0aa-4f93-a196-fa47bbc09fb5",
+                "ordinal": 2
+              },
+              {
+                "name": "Día",
+                "column": "Día",
+                "lineageTag": "051493d3-a627-42c3-a2f4-36dd407ab078",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "8fe062f1-02a8-4389-8dcd-6a75db35b224"
+          }
+        ],
+        "isHidden": true,
+        "isPrivate": true,
+        "lineageTag": "5ea23962-3fe5-41d2-aae9-f3e336089510",
+        "partitions": [
+          {
+            "name": "DateTableTemplate_e6acb518-b6ea-4524-ac0d-22c7b6a64c4c",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "data_human v_decima_vista",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "85176232-253d-4a19-958e-e7ff1e120b74",
+            "sourceColumn": "year",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "hires",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "4e18a78c-2ffa-4a9c-adf8-111dd34a35bb",
+            "sourceColumn": "hires",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "terminations",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "70dd2a8c-2e2c-4892-b0e5-caa121eb358d",
+            "sourceColumn": "terminations",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "net_change",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "ffdfbb6e-15d5-464b-87d4-e1739281c1c8",
+            "sourceColumn": "net_change",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "net_change_percent",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "74291658-8d6f-4d5c-b7a5-56833823d75d",
+            "sourceColumn": "net_change_percent",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "871cf4bc-942b-4f7b-80ce-8208a9b24d33",
+        "partitions": [
+          {
+            "name": "data_human v_decima_vista",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Origen = MySQL.Database(\"localhost:3306\", \"data_human\", [ReturnSingleDatabase=true]),",
+                "    data_human_v_decima_vista = Origen{[Schema=\"data_human\",Item=\"v_decima_vista\"]}[Data]",
+                "in",
+                "    data_human_v_decima_vista"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "data_human v_novena_vista",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "location_city",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4caa4fcf-3df3-4786-b59c-4dec34d1e488",
+            "sourceColumn": "location_city",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "location_state",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "787bc125-6e6a-4da6-8a4a-944c1b881e7f",
+            "sourceColumn": "location_state",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "cantidad",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "92eb202c-66c4-482a-a7be-153c427328bb",
+            "sourceColumn": "cantidad",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "40f97236-5213-4bd3-8aaf-569e3b0ff144",
+        "partitions": [
+          {
+            "name": "data_human v_novena_vista",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Origen = MySQL.Database(\"localhost:3306\", \"data_human\", [ReturnSingleDatabase=true]),",
+                "    data_human_v_novena_vista = Origen{[Schema=\"data_human\",Item=\"v_novena_vista\"]}[Data]",
+                "in",
+                "    data_human_v_novena_vista"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "data_human v_octava_vista",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "department",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "97f60f61-0c9a-4276-afe8-fafd20a5972b",
+            "sourceColumn": "department",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "total_count",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "ba3a1c62-8d9c-4f56-8529-88bb2082926f",
+            "sourceColumn": "total_count",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "terminated_count",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "849b9c51-cad8-4713-ac6f-95889b507d01",
+            "sourceColumn": "terminated_count",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "terminaton_rate",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "2ad6302a-9f33-46a8-9018-318578143be6",
+            "sourceColumn": "terminaton_rate",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "53bf900b-cd3d-4365-8843-0c071e0023a5",
+        "partitions": [
+          {
+            "name": "data_human v_octava_vista",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Origen = MySQL.Database(\"localhost:3306\", \"data_human\", [ReturnSingleDatabase=true]),",
+                "    data_human_v_octava_vista = Origen{[Schema=\"data_human\",Item=\"v_octava_vista\"]}[Data]",
+                "in",
+                "    data_human_v_octava_vista"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "data_human v_quinta_vista",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "duracion_tiempo_promedio_trabajado",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "c854e8a9-c681-45a0-b717-619252d99b31",
+            "sourceColumn": "duracion_tiempo_promedio_trabajado",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "d14d6e8b-003e-45d8-a92f-612f1df3e3b6",
+        "partitions": [
+          {
+            "name": "data_human v_quinta_vista",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Origen = MySQL.Database(\"localhost:3306\", \"data_human\", [ReturnSingleDatabase=true]),",
+                "    data_human_v_quinta_vista = Origen{[Schema=\"data_human\",Item=\"v_quinta_vista\"]}[Data]",
+                "in",
+                "    data_human_v_quinta_vista"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "data_human v_segunda_vista",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "race",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "533ace50-7a59-4771-8fa8-51e6e941bbb6",
+            "sourceColumn": "race",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "cantidad",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "10ebc847-f72d-4512-84b7-0aebde8998c3",
+            "sourceColumn": "cantidad",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "a7e401ea-e1bf-402b-9baa-9f40eee1febb",
+        "partitions": [
+          {
+            "name": "data_human v_segunda_vista",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Origen = MySQL.Database(\"localhost:3306\", \"data_human\", [ReturnSingleDatabase=true]),",
+                "    data_human_v_segunda_vista = Origen{[Schema=\"data_human\",Item=\"v_segunda_vista\"]}[Data]",
+                "in",
+                "    data_human_v_segunda_vista"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "data_human v_septima_vista",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "jobtitle",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6550daca-d86f-46c3-821b-3b8b38b156d9",
+            "sourceColumn": "jobtitle",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "cantidad",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "ee7f3187-f8c1-4690-af23-06370c49c39d",
+            "sourceColumn": "cantidad",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "c9edb9a9-78f0-4c27-90c0-b8a252780e4c",
+        "partitions": [
+          {
+            "name": "data_human v_septima_vista",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Origen = MySQL.Database(\"localhost:3306\", \"data_human\", [ReturnSingleDatabase=true]),",
+                "    data_human_v_septima_vista = Origen{[Schema=\"data_human\",Item=\"v_septima_vista\"]}[Data]",
+                "in",
+                "    data_human_v_septima_vista"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "data_human v_sexta_vista",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "department",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a54c65f9-8715-4e21-b90b-de6513232772",
+            "sourceColumn": "department",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "jobtitle",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "bbe78310-aedf-4746-befb-63add11828b3",
+            "sourceColumn": "jobtitle",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "hombres",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "976cddc0-5aaf-4363-b3fa-1299521c4acb",
+            "sourceColumn": "hombres",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "mujeres",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "81f15689-421a-43d1-9b8a-722fca45dfce",
+            "sourceColumn": "mujeres",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Non_Conforming",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "6855ebb4-5418-434e-8466-192cf3f2cc29",
+            "sourceColumn": "Non_Conforming",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "e5a49a24-3718-4d65-8a35-a99b8d54e0ae",
+        "partitions": [
+          {
+            "name": "data_human v_sexta_vista",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Origen = MySQL.Database(\"localhost:3306\", \"data_human\", [ReturnSingleDatabase=true]),",
+                "    data_human_v_sexta_vista = Origen{[Schema=\"data_human\",Item=\"v_sexta_vista\"]}[Data]",
+                "in",
+                "    data_human_v_sexta_vista"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "data_human v_tercera_vista",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "group_edad",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "90d6c7bb-2417-48ff-8528-5074e8a7d70f",
+            "sourceColumn": "group_edad",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "cantidad",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "40fb9d55-2315-46fe-ade9-5d9ee28e6510",
+            "sourceColumn": "cantidad",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "11a713fc-0400-496f-8908-309761951253",
+        "partitions": [
+          {
+            "name": "data_human v_tercera_vista",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Origen = MySQL.Database(\"localhost:3306\", \"data_human\", [ReturnSingleDatabase=true]),",
+                "    data_human_v_tercera_vista = Origen{[Schema=\"data_human\",Item=\"v_tercera_vista\"]}[Data]",
+                "in",
+                "    data_human_v_tercera_vista"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "data_human v_undecima_vista",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Exception"
+          }
+        ],
+        "columns": [
+          {
+            "name": "department",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2a14d24b-0d59-4408-b200-3c5756683822",
+            "sourceColumn": "department",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "avg_tenure",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "1cd4c3d6-08b0-4556-8e09-9813719bba65",
+            "sourceColumn": "avg_tenure",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "961babad-3f37-49e9-b7a5-11cd3a66f55f",
+        "partitions": [
+          {
+            "name": "data_human v_undecima_vista",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Origen = MySQL.Database(\"localhost:3306\", \"data_human\", [ReturnSingleDatabase=true]),",
+                "    data_human_v_undecima_vista = Origen{[Schema=\"data_human\",Item=\"v_undecima_vista\"]}[Data]",
+                "in",
+                "    data_human_v_undecima_vista"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "data_human w_primera_consulta",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "cantidad",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "51fa6ac6-b215-48bd-8e3a-97bc33b89430",
+            "sourceColumn": "cantidad",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "gender",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "62dbe6cf-4844-404d-83e8-7e283cd03aad",
+            "sourceColumn": "gender",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "98b5a7ab-dbf8-4f72-9b5e-6ffc5cfeb673",
+        "partitions": [
+          {
+            "name": "data_human w_primera_consulta",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Origen = MySQL.Database(\"localhost:3306\", \"data_human\", [ReturnSingleDatabase=true]),",
+                "    data_human_w_primera_consulta = Origen{[Schema=\"data_human\",Item=\"w_primera_consulta\"]}[Data]",
+                "in",
+                "    data_human_w_primera_consulta"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "data_human v_group_edad_genero",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegación"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "group_edad",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6a296ca8-e3a3-4c54-a715-4fbb1343494e",
+            "sourceColumn": "group_edad",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "gender",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b63e156c-f658-4f28-b260-406d824407fd",
+            "sourceColumn": "gender",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "cantidad",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "b6bb782b-4010-47c9-aba4-a45b11829485",
+            "sourceColumn": "cantidad",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "b16c6e57-f2dc-4dc6-b183-5bab50881ef0",
+        "partitions": [
+          {
+            "name": "data_human v_group_edad_genero",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Origen = MySQL.Database(\"localhost:3306\", \"data_human\", [ReturnSingleDatabase=true]),",
+                "    data_human_v_group_edad_genero = Origen{[Schema=\"data_human\",Item=\"v_group_edad_genero\"]}[Data]",
+                "in",
+                "    data_human_v_group_edad_genero"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

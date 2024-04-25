@@ -1,0 +1,144 @@
+{
+  "config": "{\"version\":\"5.49\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU11\",\"version\":\"5.49\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"slowDataSourceSettings\":{\"isCrossHighlightingDisabled\":false,\"isSlicerSelectionsButtonEnabled\":false,\"isFilterSelectionsButtonEnabled\":false,\"isFieldWellButtonEnabled\":false,\"isApplyAllButtonEnabled\":false},\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 1,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY23SU11",
+            "path": "BaseThemes/CY23SU11.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Página 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"1960b4e9825ee2817acd\",\"layouts\":[{\"id\":0,\"position\":{\"x\":47.65957446808511,\"y\":432.8267477203648,\"z\":4000,\"width\":478.5410334346505,\"height\":280.1215805471125,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"map\",\"projections\":{\"Category\":[{\"queryRef\":\"data_human v_novena_vista.location_state\",\"active\":true}],\"Size\":[{\"queryRef\":\"Sum(data_human v_novena_vista.cantidad)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"data_human v_novena_vista\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"location_state\"},\"Name\":\"data_human v_novena_vista.location_state\",\"NativeReferenceName\":\"location_state\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"cantidad\"}},\"Function\":0},\"Name\":\"Sum(data_human v_novena_vista.cantidad)\",\"NativeReferenceName\":\"Suma de cantidad\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"bubbles\":[{\"properties\":{\"bubbleSize\":{\"expr\":{\"Literal\":{\"Value\":\"10L\"}}}}}],\"mapStyles\":[{\"properties\":{\"mapTheme\":{\"expr\":{\"Literal\":{\"Value\":\"'road'\"}}}}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"enableBackground\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Empleados por Estado'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"15D\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 280.12,
+          "width": 478.54,
+          "x": 47.66,
+          "y": 432.83,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"6dde3ffebe1f5eb150c5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":31.124620060790274,\"y\":131.30699088145897,\"z\":1000,\"width\":375.44072948328267,\"height\":279.1489361702128,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"data_human w_primera_consulta.gender\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(data_human w_primera_consulta.cantidad)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"data_human w_primera_consulta\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"gender\"},\"Name\":\"data_human w_primera_consulta.gender\",\"NativeReferenceName\":\"gender\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"cantidad\"}},\"Function\":0},\"Name\":\"CountNonNull(data_human w_primera_consulta.cantidad)\",\"NativeReferenceName\":\"Suma de cantidad\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"cantidad\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"valueAxis\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"titleText\":{\"expr\":{\"Literal\":{\"Value\":\"'Numero de empleados'\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Numero de empleados'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 279.15,
+          "width": 375.44,
+          "x": 31.12,
+          "y": 131.31,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"a15fcdc62e84d05e5f7a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":379.3313069908815,\"y\":131.30699088145897,\"z\":2000,\"width\":485.34954407294833,\"height\":293.7386018237082,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Category\":[{\"queryRef\":\"data_human v_cuarta_vista.location\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(data_human v_cuarta_vista.cantidad)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"data_human v_cuarta_vista\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"location\"},\"Name\":\"data_human v_cuarta_vista.location\",\"NativeReferenceName\":\"location\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"cantidad\"}},\"Function\":0},\"Name\":\"CountNonNull(data_human v_cuarta_vista.cantidad)\",\"NativeReferenceName\":\"Suma de cantidad\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"cantidad\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.6}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"data_human v_cuarta_vista\"}},\"Property\":\"location\"}},\"Right\":{\"Literal\":{\"Value\":\"'Remote'\"}}}}}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"15D\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 293.74,
+          "width": 485.35,
+          "x": 379.33,
+          "y": 131.31,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"a644aef253b42c059f4c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":995.0151975683891,\"y\":14.589665653495441,\"z\":0,\"width\":181.88449848024317,\"height\":109.90881458966565,\"tabOrder\":0}},{\"id\":1,\"position\":{\"x\":182,\"y\":0,\"z\":1,\"width\":142,\"height\":177}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(data_human v_quinta_vista.duracion_tiempo_promedio_trabajado)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"data_human v_quinta_vista\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"duracion_tiempo_promedio_trabajado\"}},\"Function\":0},\"Name\":\"Sum(data_human v_quinta_vista.duracion_tiempo_promedio_trabajado)\",\"NativeReferenceName\":\"Suma de duracion_tiempo_promedio_trabajado\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"duracion_tiempo_promedio_trabajado\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Tiempo Promedio Duración Empleado'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"14D\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 109.91,
+          "width": 181.88,
+          "x": 995.02,
+          "y": 14.59,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"e1489727f6447a4e5412\",\"layouts\":[{\"id\":0,\"position\":{\"x\":883.161094224924,\"y\":131.30699088145897,\"z\":3000,\"width\":390.0303951367781,\"height\":279.1489361702128,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"data_human v_decima_vista.year\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(data_human v_decima_vista.net_change_percent)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"data_human v_decima_vista\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"year\"},\"Name\":\"data_human v_decima_vista.year\",\"NativeReferenceName\":\"year\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"net_change_percent\"}},\"Function\":0},\"Name\":\"Sum(data_human v_decima_vista.net_change_percent)\",\"NativeReferenceName\":\"Suma de net_change_percent\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"net_change_percent\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"lineStyles\":[{\"properties\":{\"showMarker\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"titleText\":{\"expr\":{\"Literal\":{\"Value\":\"'% de Cambio de empleados'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Cambio de Empleados  (2000-2020)'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"15D\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 279.15,
+          "width": 390.03,
+          "x": 883.16,
+          "y": 131.31,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"e6271147d27c2edeae68\",\"layouts\":[{\"id\":0,\"position\":{\"x\":547.5987841945289,\"y\":432.8267477203648,\"z\":5000,\"width\":715.8662613981763,\"height\":286.93009118541033,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"data_human v_segunda_vista.race\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(data_human v_segunda_vista.cantidad)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"data_human v_segunda_vista\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"race\"},\"Name\":\"data_human v_segunda_vista.race\",\"NativeReferenceName\":\"race\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"cantidad\"}},\"Function\":0},\"Name\":\"Sum(data_human v_segunda_vista.cantidad)\",\"NativeReferenceName\":\"Suma de cantidad\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"cantidad\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"valueAxis\":[{\"properties\":{\"gridlineShow\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"categoryAxis\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Cantidad de Razas'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"15D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 286.93,
+          "width": 715.87,
+          "x": 547.60,
+          "y": 432.83,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"ebbedc6f3a793954b72e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":58.358662613981764,\"y\":15,\"z\":6000,\"width\":884.1337386018238,\"height\":97.26443768996961,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"INFORME DE DISTRIBUICIÓN DE EMPLEADOS\",\"textStyle\":{\"fontSize\":\"28pt\",\"color\":\"#ffffff\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0}}}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"padding\":[{\"properties\":{\"top\":{\"expr\":{\"Literal\":{\"Value\":\"19D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 97.26,
+          "width": 884.13,
+          "x": 58.36,
+          "y": 15.00,
+          "z": 6000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Página 2",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection044d595abe8dea02421c",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"17670812366ea78b07f7\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.72644376899696,\"y\":0,\"z\":0,\"width\":536.8996960486322,\"height\":335.56231003039517,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"data_human v_tercera_vista.group_edad\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(data_human v_tercera_vista.cantidad)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"data_human v_tercera_vista\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"group_edad\"},\"Name\":\"data_human v_tercera_vista.group_edad\",\"NativeReferenceName\":\"group_edad\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"cantidad\"}},\"Function\":0},\"Name\":\"Sum(data_human v_tercera_vista.cantidad)\",\"NativeReferenceName\":\"Suma de cantidad\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"group_edad\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}}}}],\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"11D\"}}},\"labelPosition\":{\"expr\":{\"Literal\":{\"Value\":\"'InsideEnd'\"}}},\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Grupos de edades'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 335.56,
+          "width": 536.90,
+          "x": 9.73,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"2c0b0c82f18c17753b2d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":557.3252279635259,\"y\":346.26139817629183,\"z\":3000,\"width\":696.4133738601824,\"height\":356.96048632218844,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"data_human v_sexta_vista.department\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(data_human v_sexta_vista.hombres)\"},{\"queryRef\":\"Sum(data_human v_sexta_vista.mujeres)\"},{\"queryRef\":\"Sum(data_human v_sexta_vista.Non_Conforming)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"data_human v_sexta_vista\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"department\"},\"Name\":\"data_human v_sexta_vista.department\",\"NativeReferenceName\":\"department\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"hombres\"}},\"Function\":0},\"Name\":\"Sum(data_human v_sexta_vista.hombres)\",\"NativeReferenceName\":\"hombres\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"mujeres\"}},\"Function\":0},\"Name\":\"Sum(data_human v_sexta_vista.mujeres)\",\"NativeReferenceName\":\"mujeres\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Non_Conforming\"}},\"Function\":0},\"Name\":\"Sum(data_human v_sexta_vista.Non_Conforming)\",\"NativeReferenceName\":\"Non_Conforming\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"hombres\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(data_human v_sexta_vista.hombres)\":{\"displayName\":\"hombres\"},\"Sum(data_human v_sexta_vista.mujeres)\":{\"displayName\":\"mujeres\"},\"Sum(data_human v_sexta_vista.Non_Conforming)\":{\"displayName\":\"Non_Conforming\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"gridlineShow\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"titleText\":{\"expr\":{\"Literal\":{\"Value\":\"'Nro de Empleados'\"}}}}}],\"legend\":[{\"properties\":{\"showTitle\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0}}}}}},\"selector\":{\"metadata\":\"Sum(data_human v_sexta_vista.hombres)\"}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.6}}}}}},\"selector\":{\"metadata\":\"Sum(data_human v_sexta_vista.mujeres)\"}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":4,\"Percent\":0}}}}}},\"selector\":{\"metadata\":\"Sum(data_human v_sexta_vista.Non_Conforming)\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Distribución por género en Departamentos'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 356.96,
+          "width": 696.41,
+          "x": 557.33,
+          "y": 346.26,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"35b0105a487b6358c141\",\"layouts\":[{\"id\":0,\"position\":{\"x\":557,\"y\":0,\"width\":537,\"height\":336,\"z\":2000,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"data_human v_octava_vista.department\"},{\"queryRef\":\"Sum(data_human v_octava_vista.terminaton_rate)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"data_human v_octava_vista\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"department\"},\"Name\":\"data_human v_octava_vista.department\",\"NativeReferenceName\":\"department\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"terminaton_rate\"}},\"Function\":0},\"Name\":\"Sum(data_human v_octava_vista.terminaton_rate)\",\"NativeReferenceName\":\"Suma de terminaton_rate\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"terminaton_rate\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnHeaders\":[{\"properties\":{\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"13D\"}}}}}],\"values\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}}}}],\"total\":[{\"properties\":{\"totals\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 336.00,
+          "width": 537.00,
+          "x": 557.00,
+          "y": 0.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"6df2ab0612e1284eaa38\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10,\"y\":346,\"width\":537,\"height\":336,\"z\":1000,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"data_human v_group_edad_genero.group_edad\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(data_human v_group_edad_genero.cantidad)\"}],\"Series\":[{\"queryRef\":\"data_human v_group_edad_genero.gender\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"data_human v_group_edad_genero\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"group_edad\"},\"Name\":\"data_human v_group_edad_genero.group_edad\",\"NativeReferenceName\":\"group_edad\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"cantidad\"}},\"Function\":0},\"Name\":\"Sum(data_human v_group_edad_genero.cantidad)\",\"NativeReferenceName\":\"Suma de cantidad\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"gender\"},\"Name\":\"data_human v_group_edad_genero.gender\",\"NativeReferenceName\":\"gender\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"group_edad\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"gridlineShow\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelPosition\":{\"expr\":{\"Literal\":{\"Value\":\"'OutsideEnd'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"data_human v_group_edad_genero\"}},\"Property\":\"gender\"}},\"Right\":{\"Literal\":{\"Value\":\"'Male'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.6}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"data_human v_group_edad_genero\"}},\"Property\":\"gender\"}},\"Right\":{\"Literal\":{\"Value\":\"'Female'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":4,\"Percent\":0}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"data_human v_group_edad_genero\"}},\"Property\":\"gender\"}},\"Right\":{\"Literal\":{\"Value\":\"'Non-Conforming'\"}}}}}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Grupo de edades por genero'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 336.00,
+          "width": 537.00,
+          "x": 10.00,
+          "y": 346.00,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}
